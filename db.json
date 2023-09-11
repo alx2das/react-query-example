@@ -1,0 +1,16 @@
+{
+  "get-user-info": {
+    "id": 1,
+    "fullName": "First Last",
+    "companies": [
+      {
+        "id": 1,
+        "name": "CFirst"
+      },
+      {
+        "id": 2,
+        "name": "CSecond"
+      }
+    ]
+  }
+}
