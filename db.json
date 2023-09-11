@@ -1,16 +1,34 @@
 {
   "get-user-info": {
-    "id": 1,
+    "id": "user1",
     "fullName": "First Last",
     "companies": [
       {
-        "id": 1,
+        "id": "company1",
         "name": "CFirst"
       },
       {
-        "id": 2,
+        "id": "company2",
         "name": "CSecond"
       }
     ]
+  },
+  "banners": {
+    "company1": {
+      "message": null,
+      "status": "none"
+    },
+    "company2": {
+      "message": "click to continue",
+      "status": "InProgress"
+    }
+  },
+  "docs": {
+    "company1": {
+      "name": "Doc for Company_1"
+    },
+    "company2": {
+      "name": "Doc for Company_2"
+    }
   }
 }
