@@ -1,15 +1,13 @@
 import { FC } from "react";
 import { useUserQuery } from "../queries";
+import { useChangeCompany } from "../hooks";
 
 const Sidebar: FC = () => {
     // return <div className="box sidebar">Sidebar</div>;
 
 
     const { data: user } = useUserQuery();
-
-    const changeCompany = (company: any) => {
-        console.log(company);
-    };
+    const changeCompany = useChangeCompany();
 
     return (
         <div className="box sidebar">

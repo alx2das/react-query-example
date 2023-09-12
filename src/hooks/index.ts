@@ -1,1 +1,2 @@
-export * from "./useCompany";
+export * from "./useCurrentCompany";
+export * from "./useChangeCompany";

@@ -1,6 +1,6 @@
 import { useUserQuery } from "../queries";
 
-export const useCompany = () => {
+export const useCurrentCompany = () => {
     const { data } = useUserQuery();
 
     return data

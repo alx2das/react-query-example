@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../common";
-import { useCompany } from "../hooks";
+import { useCurrentCompany } from "../hooks";
 
 export const useDocQuery = () => {
-    const company = useCompany();
+    const company = useCurrentCompany();
     const companyId = company.id || null;
 
     return useQuery({
