@@ -16,7 +16,7 @@ export const useChangeCompany = () => {
             ...user,
             companies: user.companies.map((company: any) => ({
                 ...company,
-                isCurrent: company.id === newCompanyId
+                isSelected: company.id === newCompanyId
             }))
         });
     };
