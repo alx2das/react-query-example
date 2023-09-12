@@ -1,12 +1,9 @@
 import { FC } from "react";
-import { useUserQuery } from "../queries";
 import { Header, Sidebar, Content } from "../components";
+import { useUserQuery } from "../queries";
 
 const DashboardPage: FC = () => {
-    const { isLoading, isError, data } = useUserQuery();
-
-    if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error</div>;
+    const { data } = useUserQuery();
 
     return (
         <div className="container">

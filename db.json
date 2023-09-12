@@ -1,5 +1,5 @@
 {
-  "get-user-info": {
+  "user": {
     "id": "user1",
     "fullName": "First Last",
     "companies": [
@@ -16,19 +16,19 @@
   "banners": {
     "company1": {
       "message": null,
-      "status": "none"
+      "status": "None"
     },
     "company2": {
       "message": "click to continue",
       "status": "InProgress"
     }
   },
-  "docs": {
+  "documents": {
     "company1": {
-      "name": "Doc for Company_1"
+      "name": "Document form Company #1"
     },
     "company2": {
-      "name": "Doc for Company_2"
+      "name": "Document form Company #2"
     }
   }
 }

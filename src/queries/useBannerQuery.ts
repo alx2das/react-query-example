@@ -3,13 +3,12 @@ import { api } from "../common";
 import { useCurrentCompany } from "../hooks";
 
 export const useBannerQuery = () => {
-    const company = useCurrentCompany();
-    const companyId = company.id || null;
+    const companyId = useCurrentCompany()?.id
 
     return useQuery({
-        queryKey: ["banners", companyId],
+        queryKey: ["banner", companyId],
         queryFn: async () => {
-            const { data } = await api.get(`/banners`);
+            const { data } = await api.get("/banners");
             return data?.[companyId] || null;
         },
 

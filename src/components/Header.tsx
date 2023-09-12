@@ -1,17 +1,20 @@
 import { FC } from "react";
-import { useUserQuery, useBannerQuery } from "../queries";
+import { useUserQuery } from "../queries";
+import {Link} from "react-router-dom";
 
 const Header: FC = () => {
-    const { data: user } = useUserQuery();
-    const { data: banner, isLoading } = useBannerQuery();
+    const { data } = useUserQuery();
 
     return (
         <div className="box header">
-            <div>{user.fullName}</div>
-
-            {!isLoading && banner && (
-                <div>[{banner.status}] {banner.message}</div>
-            )}
+            <div>{data.fullName}</div>
+            <div>
+                <Link to="/">Dashboard</Link>
+                &nbsp;
+                <Link to="/documents">Documents</Link>
+                &nbsp;
+                <Link to="/setting">Setting</Link>
+            </div>
         </div>
     );
 };

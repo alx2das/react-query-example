@@ -1,23 +1,23 @@
-import { useQueryClient, QueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { storage } from "../common";
 
 export const useChangeCompany = () => {
-    const queryClient = useQueryClient()
+    const queryClient = useQueryClient();
 
     return (company: any) => {
         if (!company) return;
 
-        const selectedCompanyId = company.id;
+        const newCompanyId: string = company.id;
         const user = queryClient.getQueryData<any>(["user"]);
 
-        storage.set("companyId", selectedCompanyId);
+        storage.set("companyId", newCompanyId);
 
         queryClient.setQueryData(["user"], {
             ...user,
-            companies: user?.companies.map((company: any) => ({
+            companies: user.companies.map((company: any) => ({
                 ...company,
-                isSelected: company.id === selectedCompanyId
-            })) || []
-        })
+                isCurrent: company.id === newCompanyId
+            }))
+        });
     };
 };

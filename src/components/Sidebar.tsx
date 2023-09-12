@@ -1,24 +1,23 @@
 import { FC } from "react";
+import { Button } from "antd";
 import { useUserQuery } from "../queries";
 import { useChangeCompany } from "../hooks";
 
 const Sidebar: FC = () => {
-    // return <div className="box sidebar">Sidebar</div>;
-
-
-    const { data: user } = useUserQuery();
+    const { data } = useUserQuery();
     const changeCompany = useChangeCompany();
 
     return (
         <div className="box sidebar">
-            {user?.companies.map((company: any) => (
-                <div key={company.id}>
-                    <button
-                        onClick={() => changeCompany(company)}
-                    >
-                        {company.name}
-                    </button>
-                </div>
+            {data.companies.map((company: any) => (
+                <Button
+                    block
+                    key={company.id}
+                    type={company.isSelected ? "primary" : "default"}
+                    onClick={() => changeCompany(company)}
+                >
+                    {company.name}
+                </Button>
             ))}
         </div>
     );

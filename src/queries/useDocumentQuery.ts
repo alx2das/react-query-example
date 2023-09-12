@@ -2,14 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 import { api } from "../common";
 import { useCurrentCompany } from "../hooks";
 
-export const useDocQuery = () => {
-    const company = useCurrentCompany();
-    const companyId = company.id || null;
+export const useDocumentQuery = () => {
+    const companyId = useCurrentCompany()?.id
 
     return useQuery({
-        queryKey: ["docs", companyId],
+        queryKey: ["documents", companyId],
         queryFn: async () => {
-            const { data } = await api.get(`/docs`);
+            const { data } = await api.get("/documents");
             return data?.[companyId] || null;
         },
 

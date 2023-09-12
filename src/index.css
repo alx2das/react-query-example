@@ -1,6 +1,6 @@
 body {
     margin: 40px;
-    font-family: "Arial Narrow";
+    font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,10 +47,14 @@ ul, ol {
 .box {
     background-color: #dedede;
     border-radius: 5px;
-    padding: 50px;
+    padding: 30px;
     font-size: 125%;
 }
 
 .flex {
     display: flex;
+}
+
+.ant-btn-block, .ant-card {
+    margin-bottom: 10px;
 }

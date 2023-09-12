@@ -1,3 +1,3 @@
-export * from "./useUser";
-export * from "./useBanner";
-export * from "./useDoc";
+export * from "./useUserQuery";
+export * from "./useBannerQuery";
+export * from "./useDocumentQuery";
