@@ -1,17 +1,15 @@
 {
   "user": {
     "id": "user1",
-    "fullName": "FullName_XBCHST",
+    "fullName": "FullName_JQWWSZ",
     "companies": [
       {
         "id": "company1",
-        "name": "CFirst",
-        "isSelected": false
+        "name": "CFirst"
       },
       {
         "id": "company2",
-        "name": "CSecond",
-        "isSelected": true
+        "name": "CSecond"
       }
     ]
   },
