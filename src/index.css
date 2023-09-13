@@ -73,6 +73,6 @@ span.mr {
     display: flex;
 }
 
-.ant-btn-block, .ant-card {
+.ant-card {
     margin-bottom: 10px;
 }

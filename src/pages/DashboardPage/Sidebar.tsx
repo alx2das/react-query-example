@@ -16,6 +16,7 @@ const Sidebar: FC = () => {
                 renderItem={(company: any) => (
                     <List.Item key={company.id}>
                         <Button
+                            block
                             type={company.isSelected ? "primary" : "default"}
                             onClick={() => changeCompany(company)}
                         >
