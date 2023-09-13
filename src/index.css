@@ -1,5 +1,4 @@
 body {
-    margin: 40px;
     font-family: sans-serif;
 }
 
@@ -29,6 +28,14 @@ ul, ol {
 
 .footer {
     grid-area: footer;
+}
+
+.main_menu {
+
+}
+
+.main_container {
+    margin: 40px;
 }
 
 .container {

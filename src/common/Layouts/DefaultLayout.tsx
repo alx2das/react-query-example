@@ -1,11 +1,41 @@
 import { FC } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import { Menu } from "antd";
+
+
+const items = [
+    {
+        key: "/",
+        label: <Link to="/">Dashboard</Link>
+    },
+    {
+        key: "/documents",
+        label: <Link to="/documents">Documents</Link>
+    },
+    {
+        key: "/companies",
+        label: <Link to="/companies">Companies</Link>
+    },
+    {
+        key: "/onboarding",
+        label: <Link to="/onboarding">Onboarding</Link>
+    },
+    {
+        key: "/setting",
+        label: <Link to="/setting">Setting</Link>
+    },
+];
 
 const DefaultLayout: FC = () => {
+    const location = useLocation();
+
     return (
         <>
-            <div>Navigation</div>
-            <Outlet />
+            <Menu mode="horizontal" items={items} selectedKeys={[location.pathname]} />
+
+            <div className="main_container">
+                <Outlet />
+            </div>
         </>
     );
 };

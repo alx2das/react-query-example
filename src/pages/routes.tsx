@@ -7,6 +7,7 @@ import SettingPage from "./SettingPage";
 export const routes = [
     {
         index: true,
+        key: "dashboard",
         element: <DashboardPage />
     },
     {
