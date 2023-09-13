@@ -13,10 +13,6 @@ const items = [
         label: <Link to="/documents">Documents</Link>
     },
     {
-        key: "/companies",
-        label: <Link to="/companies">Companies</Link>
-    },
-    {
         key: "/onboarding",
         label: <Link to="/onboarding">Onboarding</Link>
     },

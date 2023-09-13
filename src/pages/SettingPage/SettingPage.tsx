@@ -1,23 +1,30 @@
 import { FC } from "react";
-import { Divider } from "antd";
+import { Button, Divider } from "antd";
 
-import Header from "../DashboardPage/Header";
-import Sidebar from "../DashboardPage/Sidebar";
-import Content from "../DashboardPage/Content";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Content from "./Content";
 
-import SettingUsername from "./SettingUsername";
-import SettingCompanies from "./SettingCompanies";
+import { useUserMutate } from "../../queries";
+import { random } from "../../common";
 
 const SettingPage: FC = () => {
+    const { isLoading, mutate } = useUserMutate();
+
     return (
         <div className="container">
             <Header />
             <Sidebar />
 
             <Content>
-                <SettingUsername />
+                <Button
+                    loading={isLoading}
+                    onClick={() => mutate(random.string())}
+                >
+                    Change username
+                </Button>
+
                 <Divider />
-                <SettingCompanies />
             </Content>
         </div>
     );
