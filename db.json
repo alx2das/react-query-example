@@ -13,22 +13,26 @@
       }
     ]
   },
-  "banners": {
-    "company1": {
-      "message": null,
-      "status": "None"
+  "banners": [
+    {
+      "company": "company1",
+      "status": "None",
+      "message": null
     },
-    "company2": {
-      "message": "click to continue",
-      "status": "InProgress"
+    {
+      "company": "company2",
+      "status": "InProgress",
+      "message": "click to continue"
     }
-  },
-  "documents": {
-    "company1": {
-      "name": "Document form Company #1"
+  ],
+  "documents": [
+    {
+      "company": "company1",
+      "message": "Document for First company"
     },
-    "company2": {
-      "name": "Document form Company #2"
+    {
+      "company": "company2",
+      "message": "Document for Second company"
     }
-  }
+  ]
 }
