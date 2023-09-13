@@ -6,11 +6,7 @@ import { useUserQuery } from "../../queries";
 const Header: FC = () => {
     const { data } = useUserQuery();
 
-    return (
-        <HeaderComponent>
-            {data.fullName}
-        </HeaderComponent>
-    );
+    return <HeaderComponent>{data.username}</HeaderComponent>;
 };
 
 export default Header;
