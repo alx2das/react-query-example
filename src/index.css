@@ -11,6 +11,17 @@ ul, ol {
     padding-left: 15px;
 }
 
+span.mr {
+    padding: 0 10px;
+}
+
+.m-load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+}
+
 .sidebar {
     grid-area: sidebar;
 }

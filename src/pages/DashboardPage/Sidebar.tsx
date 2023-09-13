@@ -1,20 +1,26 @@
 import { FC } from "react";
-import { List, Typography } from "antd";
+import { List, Button } from "antd";
 
 import { SidebarComponent } from "../../components";
 import { useUserQuery } from "../../queries";
+import { useChangeCompany } from "../../hooks";
 
 const Sidebar: FC = () => {
     const { data } = useUserQuery();
+    const changeCompany = useChangeCompany();
 
     return (
         <SidebarComponent>
             <List
                 dataSource={data.companies}
-                renderItem={(item: any) => (
-                    <List.Item key={item.id}>
-                        <Typography.Text mark>[{item.isSelected ? "X" : "O"}]</Typography.Text>&nbsp;
-                         {item.name}
+                renderItem={(company: any) => (
+                    <List.Item key={company.id}>
+                        <Button
+                            type={company.isSelected ? "primary" : "default"}
+                            onClick={() => changeCompany(company)}
+                        >
+                            {company.name}
+                        </Button>
                     </List.Item>
                 )}
             />
