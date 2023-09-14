@@ -20,6 +20,10 @@ const items = [
         key: "/setting",
         label: <Link to="/setting">Setting</Link>
     },
+    {
+        key: "/advantage",
+        label: <Link to="/advantage">Advantage</Link>
+    },
 ];
 
 const DefaultLayout: FC = () => {
