@@ -1,7 +1,7 @@
 {
   "user": {
     "id": "user1",
-    "username": "EZXUTO",
+    "username": "Username",
     "companies": [
       {
         "id": "company1",
@@ -74,8 +74,8 @@
     }
   ],
   "advantage": {
-    "title": "EOFUFM",
-    "message": "XZCEFP",
+    "title": "advantage title",
+    "message": "advantage message",
     "enabled": true
   }
 }
