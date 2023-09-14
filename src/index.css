@@ -11,6 +11,10 @@ ul, ol {
     padding-left: 15px;
 }
 
+.px10 {
+    padding: 10px 0;
+}
+
 span.mr {
     padding: 0 10px;
 }
@@ -71,6 +75,14 @@ span.mr {
 
 .flex {
     display: flex;
+}
+
+.nav-btn {
+    padding-top: 15px;
+}
+
+.nav-btn > button {
+    margin-right: 15px;
 }
 
 .ant-card {

@@ -39,6 +39,7 @@
     {
       "stepId": "onboarding1",
       "prevStepId": null,
+      "nextStepId": "onboarding2",
       "data": {
         "title": "Title for FIRST step",
         "message": "Message for FIRST step"
@@ -47,6 +48,7 @@
     {
       "stepId": "onboarding2",
       "prevStepId": "onboarding1",
+      "nextStepId": "onboarding3",
       "data": {
         "title": "Title for SECOND step",
         "message": "Message for SECOND step"
@@ -55,6 +57,7 @@
     {
       "stepId": "onboarding3",
       "prevStepId": "onboarding2",
+      "nextStepId": "onboarding4",
       "data": {
         "title": "Title for THIRD step",
         "message": "Message for THIRD step"
@@ -63,6 +66,7 @@
     {
       "stepId": "onboarding4",
       "prevStepId": "onboarding3",
+      "nextStepId": null,
       "data": {
         "title": "Title for FOURTH step",
         "message": "Message for FOURTH step"
