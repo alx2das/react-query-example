@@ -13,10 +13,19 @@ const CreateRoutes: FC<Props> = ({ routes }) => {
                 {routes.map((route: any) => (
                     <Route
                         key={route.element}
-                        index={route?.index}
-                        path={route?.path}
+                        index={route.index}
+                        path={route.path}
                         element={route.element}
-                    />
+                    >
+                        {route?.children?.map((child: any) => (
+                            <Route
+                                key={child.element}
+                                index={child.index}
+                                path={child.path}
+                                element={child.element}
+                            />
+                        ))}
+                    </Route>
                 ))}
             </Route>
         </Routes>

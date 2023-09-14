@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Spin } from 'antd';
+import { Spin } from "antd";
 
 import { CreateRoutes } from "./common";
 import { routes } from "./pages/routes";

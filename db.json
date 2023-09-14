@@ -34,5 +34,39 @@
       "company": "company2",
       "message": "Document for Second company"
     }
+  ],
+  "onboarding": [
+    {
+      "stepId": "onboarding1",
+      "prevStepId": null,
+      "data": {
+        "title": "Title for FIRST step",
+        "message": "Message for FIRST step"
+      }
+    },
+    {
+      "stepId": "onboarding2",
+      "prevStepId": "onboarding1",
+      "data": {
+        "title": "Title for SECOND step",
+        "message": "Message for SECOND step"
+      }
+    },
+    {
+      "stepId": "onboarding3",
+      "prevStepId": "onboarding2",
+      "data": {
+        "title": "Title for THIRD step",
+        "message": "Message for THIRD step"
+      }
+    },
+    {
+      "stepId": "onboarding4",
+      "prevStepId": "onboarding3",
+      "data": {
+        "title": "Title for FOURTH step",
+        "message": "Message for FOURTH step"
+      }
+    }
   ]
 }
