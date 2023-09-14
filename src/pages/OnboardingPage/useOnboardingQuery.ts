@@ -12,20 +12,17 @@ export const useOnboardingQuery = (stepId?: string | undefined) => {
         queryKey: ["onboarding", uniqueKey || "root"],
 
         queryFn: async () => {
-            const response = await api.get(`/onboarding`, {
+            const { data } = await api.get(`/onboarding`, {
                 params: {
                     stepId
                 }
             });
-            return response.data[0];
-        },
 
-        onSuccess: (data) => {
             if (!uniqueKey) {
                 navigation(`/onboarding/${data.stepId}`);
             }
 
-            return data;
+            return data[0];
         }
     });
 };
