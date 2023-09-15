@@ -14,7 +14,7 @@ const items = [
     },
     {
         key: "/onboarding",
-        label: <Link to="/onboarding">Onboarding</Link>
+        label: <Link to="/onboarding/onboarding1">Onboarding</Link>
     },
     {
         key: "/setting",
